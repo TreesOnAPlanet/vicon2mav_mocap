@@ -1,6 +1,6 @@
 # vicon2mav_mocap (v2m)
 
-This is from an old project for university. The code was created in 2015 and has not been updated since. 
+>>> *This is from an old project for university. The code was created in 2015 and has not been updated since.* <<<
 
 ### What v2m does:
 It connects to the Vicon Datastream over a network, grabs the relevant data, edits it according to the att\_pos\_mocap MavLink message and sends the message out to a TCP/IP sever.
@@ -15,9 +15,9 @@ It connects to the Vicon Datastream over a network, grabs the relevant data, edi
 
 2. Before buildingthe code:
 	* I included ...
-		* *client.h* [here](https://github.com/moskytoo/vicon2mav_mocap/blob/master/main.cpp#L26)
+		* *client.h* [here](https://github.com/TreesOnAPlanet/vicon2mav_mocap/blob/master/main.cpp#L26)
 		* *libViconDataStreamSDK_CPP.so* in the .pro file of my Qt project
-		* *mavlink.h* [here](https://github.com/moskytoo/vicon2mav_mocap/blob/master/main.cpp#L30)
+		* *mavlink.h* [here](https://github.com/TreesOnAPlanet/vicon2mav_mocap/blob/master/main.cpp#L30)
 	* Setting the constants: Constants concerning your system are set in *functions.h*. In the *main.cpp* are four constants that decide in which 'mode' v2m should run.
 
 3. About the PX4 Firmware: Use the [mocap_support_restruct branch](https://github.com/TSC21/Firmware/tree/mocap_support_restruct) by TSC21. It is not part of the master branch yet (26.06.2015), but I suppose it will be merged in soon (follow the development [here](https://github.com/PX4/Firmware/pull/2361)).
