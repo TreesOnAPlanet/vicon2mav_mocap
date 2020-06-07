@@ -1,5 +1,7 @@
 # vicon2mav_mocap (v2m)
 
+This is from an old project for university. The code was created in 2015 and has not been updated since. 
+
 ### What v2m does:
 It connects to the Vicon Datastream over a network, grabs the relevant data, edits it according to the att\_pos\_mocap MavLink message and sends the message out to a TCP/IP sever.
 
@@ -35,8 +37,3 @@ This software, as well as the used PX4 Firmware, is still not properly tested, s
 One issue which isn't resolved yet is the case when the motion capture system doesn't see an object and don't give the correct positions. Right now it's handled this way: If there is no valid data by the Vicon Datastream available, v2m stops sending att_pos_mocap messages to the PX4, in the hope that it's possible to maneuver the drone with the other sensors.
 
 Part of the att_pos_mocap message are quaternions for the attitude data. The current development of the PX4 Firmware only uses the mocap data for yaw / heading. For roll and pitch the IMU is used. This way stability critical data is still supplied in real time.
-
-
-Julian L. Nicklas
-
-julian.nicklas (at) posteo (.) de
